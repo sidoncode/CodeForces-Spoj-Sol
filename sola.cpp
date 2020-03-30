@@ -1,37 +1,40 @@
-#include <bits/stdc++.h> 
+#include <bits/stdc++.h>
 #include<conio.h>
 
-using namespace std; 
+using namespace std;
 
+int main(){
+    ios::sync_with_stdio(false);
+	cin.tie(0);
+    
+    int A[1000];
+    int n;
+    
+    cin>>n;
 
-int findMinDiff(int a[], int n){
+    for(int i=0;i<n;i++){
+        cin>>A[i];
+    }
+    int m;
+    cin>>m;
+    int x = A[n%m];
+    //int length = sizeof(A)/sizeof(A[0]);
 
-	int diff = INT_MAX;
-
-	for (int i=0; i<n-1; i++){
-		for (int j=i+1; j<n; j++){
-			if (abs(a[i] - a[j]) < diff){
-				diff = abs(a[i] - a[j]); 
-			}
-		}
-	}
-
-	return diff; 
+    if(x %2 ==0){
+        for (int i = 0; i < n;i++) {   
+            if(A[i]%2 == 0){
+                printf("%d\n", A[i]);
+            }
+        }  
+    }
+    else{
+        for (int i = 0; i < m;i++) {   
+            if(A[i]%2 != 0){
+                printf("%d\n", A[i]);
+            }
+        }  
+        
+    }getch();
+    
+    return 0;
 }
-
-
-int main() { 
-	int n;
-	cin>>n;
-	int a[n];
-
-	for(int i=0;i<n;i++){
-		cin>>a[i];
-	}
-
-	cout<<findMinDiff(a,n)<<endl;
-
-	getch();
-	return 0; 
-	
-} 
