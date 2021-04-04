@@ -12,5 +12,5 @@
 ### 2) subset sum
 ### 3) word break
 ### 4) knapsack
-### 5) partition problme
-### 6) lcs
+### 5) partition problem(Painters partition)
+### 6) lcs(longest commom subsequence)
